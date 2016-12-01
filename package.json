@@ -1,0 +1,33 @@
+{
+  "name": "screwdriver-quickstart-nodejs",
+  "version": "1.0.0",
+  "description": "A quickstart repository, which serves as an example of how to use Screwdriver with NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/screwdriver-cd-test/quickstart-nodejs.git"
+  },
+  "keywords": [
+    "screwdriver",
+    "screwdriver-cd",
+    "yahoo",
+    "continuous delivery",
+    "cd",
+    "continuous integration",
+    "ci"
+  ],
+  "author": "Darren Matsumoto <aeneascorrupt@gmail.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/screwdriver-cd-test/quickstart-nodejs/issues"
+  },
+  "homepage": "https://github.com/screwdriver-cd-test/quickstart-nodejs#readme",
+  "private": true,
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
