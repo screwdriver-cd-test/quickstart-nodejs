@@ -1,6 +1,6 @@
 ---
 # Workflow list definition
-# This list describes the order that the Jobs execute. The "main" Job is always 
+# This list describes the order that the Jobs execute. The "main" Job is always
 # executed first, followed in order of the Jobs listed in this Workflow block.
 workflow:
   # We define the workflow where the "publish" Job is started after the "main" Job.
@@ -8,7 +8,7 @@ workflow:
 
 
 # Shared definition block
-# This is where you would define any attributes that all your jobs will 
+# This is where you would define any attributes that all your jobs will
 # inherit.
 shared:
   # We specify a common NodeJS Docker image for our Jobs. It takes the form of
@@ -24,7 +24,7 @@ jobs:
   main:
     # Steps is the ordered list of commands to execute.
     # Each step takes the form "step_name: command_to_run". The "step_name" is a
-    # convient label to reference it by. The "command_to_run" is the single 
+    # convenient label to reference it by. The "command_to_run" is the single 
     # command that is executed during the step.
     steps:
       # Our "install" step is first in the list. It installs your NodeJS dependencies
@@ -57,4 +57,3 @@ jobs:
       # to the NPM Registry. Our secret is stored as "NPM_TOKEN", and is accessible
       # in the build as an environment variable with the same name
       - NPM_TOKEN
-
