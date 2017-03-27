@@ -7,6 +7,6 @@ describe('Index Unit Test', () => {
         const main = require('../');
         const result = main();
 
-        expect(result).to.equal('Hello Node');
+        expect(result).to.equal('Hello World');
     });
 });
