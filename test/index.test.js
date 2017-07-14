@@ -9,4 +9,9 @@ describe('Index Unit Test', () => {
 
         expect(result).to.equal('Hello Node');
     });
+
+    it('it is a function', () => {
+    	const main = require('../');
+    	expect(main).to.be.a.function;
+    })
 });
