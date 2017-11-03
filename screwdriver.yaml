@@ -1,12 +1,4 @@
 ---
-# Workflow list definition
-# This list describes the order that the Jobs execute. The "main" Job is always
-# executed first, followed in order of the Jobs listed in this Workflow block.
-workflow:
-  # We define the workflow where the "publish" Job is started after the "main" Job.
-  - publish
-
-
 # Shared definition block
 # This is where you would define any attributes that all your jobs will
 # inherit.
@@ -22,6 +14,13 @@ jobs:
   # We explicitly define "main" in our configuration so that it does what we want
   # it to do.
   main:
+    # Requires is a single job name or array of job names that will trigger the job to run.
+    # Jobs defined with "requires: ~pr" are started by pull-request events.
+    # Jobs defined with "requires: ~commit" are started by push events.
+    # Jobs defined with "requires: ~sd@123:main" are started by job "main" from pipeline "123".
+    # Jobs defined with "requires: main" are started after "main" is done.
+    # Jobs defined with "requires: [deploy-west, deploy-east] are started after "deploy-west" and "deploy-east" are both done running successfully.
+    requires: [~pr, ~commit]
     # Steps is the ordered list of commands to execute.
     # Each step takes the form "step_name: command_to_run". The "step_name" is a
     # convenient label to reference it by. The "command_to_run" is the single 
@@ -36,6 +35,7 @@ jobs:
   # We define another Job called "publish". In this stage of the pipeline, we intend
   # on publishing our package to the NPM Registry.
   publish:
+    requires: main
     steps:
       # "set_access" is the first step that is executed. We want the community to use
       # our package, so we enable publicly accessible
