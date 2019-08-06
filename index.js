@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = () => {
-    return 'Hello Node';
+    return 'Hello first github & node.js & screwdriver.cd';
 };
