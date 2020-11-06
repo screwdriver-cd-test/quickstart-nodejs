@@ -8,6 +8,8 @@ shared:
   # Docker image - https://hub.docker.com/r/library/node/
   image: node:6
 
+# DM CHANGE
+
 # Jobs definition block
 # All pipelines have "main" by default, and is implicitly defined.
 jobs:
