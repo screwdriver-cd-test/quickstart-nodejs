@@ -2,6 +2,7 @@
 # Shared definition block
 # This is where you would define any attributes that all your jobs will
 # inherit.
+
 shared:
   # We specify a common NodeJS Docker image for our Jobs. It takes the form of
   # "repo_name:tag_label", where the "tag_label" is optional.
